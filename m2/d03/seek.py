@@ -1,0 +1,10 @@
+file = open('file','w+')
+
+file.write("dnaidiaiawdqfsdafafa")
+file.flush()
+print(file.tell())
+file.seek(1,0)
+print(file.tell())
+file.write("13213254")
+print(file.read())
+file.close()
