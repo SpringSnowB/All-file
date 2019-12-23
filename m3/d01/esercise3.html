@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>esercise3</title>
+    <style>
+    tr{
+        width: 200px;
+        height: 40px;
+        text-align: center;
+
+    }
+    </style>
+</head>
+<body>
+    <table >
+        <thead>
+            <tr>
+                <th>增加管理员</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>姓名：</td>
+                <td>
+                    <input type="text"
+                    name="name"
+                    id="name">
+                </td>
+                <td>十个字符以内</td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="password"
+                    name="pwd"
+                    id="pwd">
+                </td>
+                <td>十个字符以内</td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input 
+                    type="radio"
+                    name="sex">男士
+                    <input 
+                    type="radio"
+                    name="sex">女士
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>角色：</td>
+                <td>
+                    <input 
+                    type="checkbox"
+                    name="role"
+                    id=""
+                    >超级管理员
+                    <br>
+                    <input 
+                    type="checkbox"
+                    name="role"
+                    id=""
+                    >账单管理员
+                </td>
+                <td>至少选择一个角色</td>
+            </tr>
+            <tr>
+                <td>头像</td>
+                <td>
+                    <input type="file" value="选择文件">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="保存">
+                    <input type="reset" value="重置">
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
