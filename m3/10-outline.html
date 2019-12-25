@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>outline</title>
+    <style>
+    input:focus{
+        border: 1px solid lightseagreen;
+        border-radius: 2px;
+        outline:none;
+        /* outline: 1px solid lightseagreen; */
+    }
+    
+    #d1{
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        background-color: rgb(214, 87, 108);
+        outline:5px solid rgb(187, 79, 97);
+    }
+    #d2{
+        width: 195px;
+        height: 195px;
+        display: inline-block;
+        background-color: rgb(202, 110, 126);
+        border: 5px solid greenyellow;
+    }
+    #d3{
+        height: 200px;
+        background-color: rgb(148, 54, 69);
+    }
+
+    </style>
+</head>
+<body>
+    <input type="text">
+    <br>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hover</title>
+    <style>
+    
+    #d1{
+        width:200px;
+        height: 200px;
+        background-color: red;
+        /* 过度 当元素的样式发生变化时，可以在指定时间内完成 */
+       /* transition: 发生变化的样式 完成时间 速度 */
+        /* transition: width 1s ,height 2s;    */
+        transition: all 2s linear; 
+        /* linear线性的 */
+    }
+
+    /* 鼠标划过d1时产生的效果 */
+    #d1:hover{
+        width: 400px;
+        height: 400px;;
+    }
+    #d2{
+        font-size: 30px;
+        color: black;
+        transition: 0.5s;
+    }
+    #d2:hover{
+        color: red;
+        /* 鼠标移过时变成小手 */
+        cursor:pointer;
+    }
+    </style>
+    
+
+</head>
+<body>
+    <div id="d1"></div>
+    <!-- div#d2+tab生成带id为d2的div
+    div.d1+tab生成class为d1的div
+    -->
+    <div id="d2">会员</div>
+</body>
+</html>

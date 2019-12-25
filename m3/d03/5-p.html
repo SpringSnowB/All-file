@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>p</title>
+    <style>
+    #d1{
+        background-color: #red;
+        width:50%;
+        height: 50%%;
+    }
+
+    #d1 span{
+        /* 父元素字体两倍大小 */
+        font-size: 2em;
+    }
+    #s2{
+        font-size: 2rem;
+    }
+    </style>
+</head>
+<body>
+    <!-- p元素中如果嵌套其他的块元素，
+    在浏览器渲染到其他块元素后就会停止，
+    p元素会变成两段，有浏览器补全变成两个p -->
+    <p>
+        这是一个段落标签
+        <div>p中的div</div>
+
+    </p>
+    <div id="d1">d1中的字体
+        <span>测试2em的大小</span>
+        <span id="s2">测试2rem的大小</span>
+    </div>
+</body>
+</html>

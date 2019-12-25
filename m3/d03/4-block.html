@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>block</title>
+    <style>
+    span{
+        background-color:aquamarine;
+        /* display: block;      */
+        /* block 将span元素以行内块元素的形式显示
+        inline-block可以设置宽高，也能和其他行内元素同行显示*/
+        width :200px;
+        height: 200px;
+        display: inline-block;
+        /* display: inline; */
+        /* display: none; */  /*隐藏span元素*/
+    }
+    input{
+        
+        width: 400px;
+        height: 40px;
+    }
+    
+    div{
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+    }
+
+    .d1{
+        background-color: red;
+    }
+    .d2{
+        background-color:green;
+    }
+    .d3{
+        background-color: blue;
+    }
+
+    </style>
+</head>
+<body>
+    <span>this is span label
+    <sub>sub</sub>
+    <sup>sup</sup>
+    </span>
+   name: <input type="text">
+   <button>click me</button>
+    
+   <div class="d1"></div>
+   <div class="d2"></div>
+   <div class="d3"></div>
+</html>

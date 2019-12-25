@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>link</title>
+    <style>
+        /* 为所有超链接定义样式 */
+    a{
+        /* 取消超链接的下划线 */
+        text-decoration: none
+    }
+    /* 超链接访问前 */
+    a:link{
+        background-color:rgb(176, 221, 14);
+    }
+    /* 超链接访问后 */
+    a:visited{
+        color: rgb(143, 111, 216)
+    }
+    /* 鼠标划过超链接 */
+    a:hover{
+        text-decoration:underline;
+    }
+
+    /* 超链接激活状态（鼠标按住不放） */
+    a:active{
+        color: aqua;
+    }
+    </style>
+</head>
+<body>
+    <a href="http://tmooc.cn" target="_blank">Tmooc</a>
+</body>
+</html>
