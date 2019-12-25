@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后代、子代选择器</title>
+    <style>
+    #d1{
+        width: 400px;
+        height: 400px;
+        background-color: rgb(88, 55, 114);
+    }
+    /* d1中的子元素div的宽高为200px,背景颜色为lightblue */
+    #d1>div{
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+    }
+    
+    /* d1中的后代元素款高为100px,背景颜色为pink */
+    /* 后代元素包含子元素 */
+    /* #d1 div{
+        width: 100px;
+        height: 100px;
+        background-color:pink;
+    } */
+
+    #d1>#d2>div{
+        width: 100px;
+        height: 100px;
+        background-color:pink;
+    }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">
+            <div></div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>

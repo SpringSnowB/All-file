@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* #p1{
+        color: rgba(255, 255, 0, 0.555);
+    }
+    #div1{
+        color: rgba(255, 255, 0, 0.541);
+    }
+    #span1
+    {
+        color: rgba(255, 255, 0, 0.486);
+    } */
+    .yellow{
+        color: yellowgreen
+    }
+    .center{
+        text-align: center;
+    }
+    span.yellow{
+        font-size: 30px
+    }
+    /* 查找同时带有yellow和center两个类的元素 */
+    .yellow.center{
+        background-color:red;
+    }
+    </style>
+</head>
+<body>
+    <!-- 想要页面 中的一个p div span 中的文字变成黄色 -->
+    <!--  定义类名为yellow -->
+    <p id="p1" class="yellow center">p标签中的字体</p>
+    <div id="div1" class="yellow center">div中的字体</div>
+    <span id="span1" class="yellow">span标签中的字体</span>
+    <div class="center">第二个div</div>
+</body>
+</html>

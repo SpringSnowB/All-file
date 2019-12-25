@@ -9,25 +9,27 @@
     tr{
         width: 200px;
         height: 40px;
-        text-align: center;
+        text-align: left;
 
     }
     </style>
 </head>
 <body>
+    <h1>增加管理员</h1>
     <table >
-        <thead>
+        <!-- <thead>
             <tr>
                 <th>增加管理员</th>
             </tr>
-        </thead>
+        </thead> -->
         <tbody>
             <tr>
                 <td>姓名：</td>
                 <td>
                     <input type="text"
                     name="name"
-                    id="name">
+                    id="name"
+                    maxlength="10">
                 </td>
                 <td>十个字符以内</td>
             </tr>
@@ -36,7 +38,8 @@
                 <td>
                     <input type="password"
                     name="pwd"
-                    id="pwd">
+                    id="pwd"
+                    maxlength="10">
                 </td>
                 <td>十个字符以内</td>
             </tr>
