@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>margin</title>
+    <style>
+    div{
+        width: 200px;
+        height: 200px;
+        /* border: 2px solid paleturquoise; */
+        /* padding:5px 0 0 10px; */
+        /* margin: 10px 20px 30px 40px; */
+        background-color:teal;
+        /* 解决外边距溢出的思想是为父元素添加一个盖子
+        让子元素的外边距能找到作用的点 */
+
+        /* 方法一：为父元素添加透明边框 */
+        /* border-top:1px solid transparent; */
+        /* f父元素上外边距可能会 */
+        padding-top: 1px;
+    }
+    #d1{
+        margin-bottom: 10px;
+    }
+    #d2{
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p>pppp</p>
+    </div>
+    <div id="d2"></div>
+</body>
+</html>
