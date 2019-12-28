@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>隐式转换</title>
+</head>
+<body>
+    <script>
+    var age = prompt("please input your age:");
+    console.log("明年的今日年龄是",(age+1));
+    console.log(typeof(age+1));
+    // 只要两个内容都不是字符串 会转换成数字再进行计算
+    console.log(1+true);
+    console.log("20"+true);//20true
+    console.log(true+false); //1
+    console.log(true+null);//1+0  -->1
+    console.log("20"+null);//20null
+    console.log(20+undefined);//数字+NaN=NaN
+    console.log("20"+undefined);//20undefined
+    console.log(1/true);
+    //20
+    console.log("20"/true);  
+    console.log("20"*10);//200
+    console.log("20"*true);
+    console.log(1/undefined);//NaN
+    // 除加法外的算数运算，将两个内容转数字再运算
+    // NaN与任何数字运算结果都是NaN
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>font</title>
+    <style>
+    span{
+        font-size: 32px;
+        /* 取值为400 700时对应字体正常 和加粗字体
+        如果取值为其他数值时，可能没有对应的梯子方案 */
+        font-weight:bold;
+        /* font-style: italic; */
+        font-style: normal;/*去除字体属性 使之正常显示*/
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration:line-through;
+        
+    }
+    div{
+        /* 保证左右两端都是对其的情况下，用空白填充间距 */
+        text-align:justify;
+    }
+    #d1{
+        text-align: center;
+        height: 50px;
+        border: 1px solid teal;
+        /* line-height:75px; */
+        /* font: 字体大小/行高  字体种类 */
+        font: 32px/50px "黑体"
+    }
+    </style>
+</head>
+<body>
+    <span>测试字体</span>
+    <div id="d1">测试行高</div>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, libero. Nam qui deserunt optio earum eaque harum voluptas! A quaerat sed, quibusdam quis pariatur reprehenderit temporibus! Iure excepturi ut vitae!</div>
+    <span>lalallalal</span>
+</body>
+</html>

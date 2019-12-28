@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据类型转换显</title>
+</head>
+<body>
+    <script>
+    var num = 20;
+    console.log(num.toString());
+    console.log(20)
+    var age = null;
+        // 空对象没有toString方法   报错
+    // console.log(age.toString());
+    var str = '20';
+    console.log(Number(str));
+    var name = 'name';
+    console.log(Number(name));//不是数字的数字
+    var st= '12.693';
+    console.log(parseInt(st));//12 遇到小数点停止解析
+    console.log(parseFloat(st));//可以解析小数部分的内容
+    </script>
+</body>
+</html>
