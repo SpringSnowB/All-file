@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>relative</title>
+    <style>
+    #d1{
+        width: 200px;
+        height: 200px;
+        background-color: teal;
+        /* 相对定位 相对元素当前位置做定位 */
+        /* 不会脱离文档流 元素还在页面占位置 */
+        position: relative;
+        /* 设置偏移量让元素相对于原本位置移动 */
+        /* 相对定位距离过大时 会在页面留下大块空白
+        通常用于对元素的微调 */
+        top:100px;
+    }
+    #d1:hover{
+        background-color: pink;
+        left: 100px;
+    }
+    #d2{
+        width: 200px;
+        height: 200px;
+        background-color:rgb(233, 49, 80);
+        /* 相对定位 相对元素当前位置做定位 */
+        position: relative;
+    }
+    #d2:hover{
+        right: 100px;
+        background-color:rgb(238, 238, 66);
+    }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+</html>

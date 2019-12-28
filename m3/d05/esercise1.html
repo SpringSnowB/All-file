@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <style>
+    #parent{
+        background: rgb(158, 153, 153);
+        color: beige;
+        height: 50px;
+        width: 200px;
+        /* 为里面子元素做参照物 */
+        position: relative;
+        text-align: center;
+        line-height: 50px;
+
+    }
+    #child{
+        background-color: red;
+        color: aliceblue;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px 10px 10px 0;
+        text-align: center;
+        line-height: 20px;
+        position: absolute;
+        top:-5px;
+        right:55px;
+
+    }
+    </style>
+</head>
+<body>
+    <div id="parent">我的购物车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;
+        <div id="child">1</div>
+    </div>
+</body>
+</html>

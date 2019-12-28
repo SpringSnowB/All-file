@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #d1{
+        width: 200px;
+        height: 200px;
+        background-color:rgb(106, 201, 188);
+        float: left;
+        /* float: right; */
+    }
+    #d2{
+        width: 200px;
+        height: 200px;
+        background-color:rgb(96, 177, 143);
+        float: left;
+        /* float: right; */
+    }
+    #d3{
+        width: 200px;
+        height: 200px;
+        background-color:rgb(74, 134, 116);
+        float: left;
+        /* float: right; */
+    }
+    #d{
+        width: 100%;
+        /* 如果子元素全部浮动 父元素中就没有内容了
+        可以手动设置高度支撑父元素显示 */
+        height: 200px;
+        border: 2px solid tomato;
+        /* 清除浮动，给父元素添加 显示父元素原本应有的高度 */
+        overflow: hidden;
+    }
+    /* .clear{
+        在父元素末尾创建一个子元素（块元素）添加claer属性
+        清除浮动
+        clear: both;
+    } */
+    </style>
+</head>
+<body>
+    <div id="d">
+            <div id="d1"></div>
+            <div id="d2"></div>
+            <div id="d3"></div>
+            <div class="clear"></div>
+    </div>
+</body>
+</html>
