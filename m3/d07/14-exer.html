@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <div id="show"></div>
+    <script>
+    window.onload=function(){
+        var input= document.getElementById('show');
+        var div= document.getElementById('show');
+        // 当用户输入完毕时
+        // onblur失去焦点事件 当用户的光标离开文本框时触发失去焦点事件
+        input.onblur=function(){
+            // 找到input的内容 
+            var val= input.value;
+            console.log(val);
+            // 将值放入div的图画中
+            div.innerHTML=val;
+        }
+
+        //添加按钮 通过点击按钮在div中显示内容
+    }
+    </script>
+</body>
+</html>

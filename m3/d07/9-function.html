@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>匿名函数</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <script>
+        //先查找单个页面元素
+        var btn= documen.getElememtByld('bin');
+        console.log(btn);
+        为页面元素绑定单击事件
+        通过元素.世界=sayHello;
+        btn.onclick=function(){
+            alert(x);
+        }
+
+
+        // 匿名函数：没有函数名的函数
+    (function(){
+        alert('hello world');   //加上()表示其为一个整体
+    } ) ();
+
+    function sayHello(){
+        alert("你好");
+    }
+
+    var sayHello=function(){
+        alert('hello    world');
+    };
+    sayHello();
+
+    </script>
+</body>
+</html>

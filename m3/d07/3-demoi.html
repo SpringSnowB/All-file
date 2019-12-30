@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>顺序结构</title>
+    <!-- 引入外部的css和js -->
+    <!-- href属性会去对应文件的位置获取数据 -->
+    <!-- src属性会将对因的文件下载到当前页运行 -->
+    <!-- css样式不会阻碍页面的加载 当css样式未找到时，浏览器也会继续向下执行 -->
+    <link rel="stylesheet" href="index.css">
+    <!-- js中的内容会直接在当前页面执行 如果没有执行完毕 会阻塞当前页面的加载 
+    建议js直接写在head里或者写在最后-->
+    <!-- 写在head中的srcipt会作为body的第一个子元素运行   多个script按顺序执行-->
+    <script src="index.js"></script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作用域</title>
+</head>
+<body>
+
+    <button id="but" >click</button>
+    <script>
+    var btn=document.getElementById('but');
+    btn.onclick=sayHello;
+
+    //声明提前
+    // 当js加载是 会将所有的全局变量名和函数名提前到最上方
+    // 如果是函数名提前 会携带函数体 ，如果是变量名提前 那么变量的值留在原地
+    function sayHello(){
+        alert('Hello World');
+    }
+    </script>
+
+
+    <script>
+        //直接写在script中的叫全局的 全局在当前标签中的任何位置都可以使用
+        var a =10;
+        b=20;
+        function fun(){
+            //在函数内的变量或函数叫做局部的 
+            // var a =1;
+            a=20;//变量不加var 表示定义全局变量 加var表示局部的
+            console.log(a);//局部未定义则使用全局中的变量a
+        }    
+        fun();
+    </script>
+</body>
+</html>

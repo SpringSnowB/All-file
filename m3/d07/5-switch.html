@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch</title>
+</head>
+<body>
+    <script>
+    var month = prompt('please input month1-12:')
+    switch(month){
+        case "1"://匹配时要求值全等
+        case "3":
+        case "5":
+        case "7":
+        case "8":
+        case "10":
+        case "12":
+        alert('31天');
+            break;
+        case "2"://匹配时要求值全等
+        alert('28天');
+        break;
+        default:
+            alert('30');
+
+        // esercise:接收用户输入的年月日计算是一年的第几天
+    }    
+    </script>
+</body>
+</html>
