@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>timer</title>
+</head>
+<body>
+    <button id="btn">clear</button>
+    <script>
+    
+    function sayHello() {
+        alert('hello word');
+    }
+    //周期性定时器
+    //创建定时器
+    // var timer = setInterval(sayHello,3000);  //时间间隔是毫秒  1000毫秒= 1秒
+    // //停止定时器(清除周期性定时器);
+    // var btn = document.getElementById('btn');
+    // btn.onclick= function(){
+    //   clearInterval(timer);  
+    // timer = null;
+    // }
+
+    //创建一次性定时器   通常用于延时做某些事情
+    var timer = setTimeout(sayHello,3000);
+    clearTimeout(timer);//清除一次性定时器
+    timer =null;//清除保存定时器的变量
+
+
+
+    
+    </script>
+</body>
+</html>

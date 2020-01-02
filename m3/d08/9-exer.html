@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <img src="imgs/bk0-8.jpg" alt="" id="pict">
+    <span id="sp">ahufhhhfoiah</span>
+    <br>
+   <button id="btn">change</button>
+    <script>
+   
+   var obj=[{im:'imgs/bk0-8.jpg',title:'a认同和hdhhdhdhdho'},{im:'imgs/bk1-8.jpg',title:'ahd和他人hhdhdhdho'},
+    {im:'imgs/bk3-8.jpg',title:'ahdhhd儿和三色热hdhdho'},{im:'imgs/bk4-8.jpg',title:'jt tyahdhhdhdhdho'},
+    {im:'imgs/bk5-8.jpg',title:'ahd色人哭已hhdhdhdho'},{im:'imgs/bk6-8.jpg',title:'a儿还河hdhhdhdhdho'},
+    {im:'imgs/bk7-8.jpg',title:'a计划，hdhhdhdhdho'},{im:'imgs/bk8-8.jpg',title:'ahd 建议他hhdhdhdho'},
+    {im:'imgs/bk9-8.jpg',title:'ahdh菲亚特hdhdhdho'},{im:'imgs/bk2-8.jpg',title:'ahd方同意及hhdhdhdho'}]
+
+
+    // var arr = ['imgs/bk0-8.jpg','imgs/bk1-8.jpg','imgs/bk2-8.jpg','imgs/bk3-8.jpg','imgs/bk4-8.jpg',
+    //                     'imgs/bk5-8.jpg','imgs/bk6-8.jpg','imgs/bk7-8.jpg','imgs/bk8-8.jpg','imgs/bk9-8.jpg'];
+    // //通过随机下标 取出下标对应的字符串
+    //通过id=img找到页面元素
+    // 设置img的src属性值为随机获取的字符串
+    var btn= document.getElementById('btn');
+    var pict = document.getElementById('pict');
+    var sp = document.getElementById('sp');
+    btn.onclick=function(){
+        var index_arr = Math.floor(Math.random()*obj.length);
+        var pict_ = obj[index_arr].im;
+        var word = obj[index_arr].title;
+        pict.setAttribute('src',pict_);
+        sp.innerText = word;
+    }
+
+
+    </script>
+    
+</body>
+</html>

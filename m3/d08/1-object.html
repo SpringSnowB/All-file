@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+        </tr>
+        <tr id="content">
+            
+        </tr>
+    </table>
+    <button id="but">flush</button>
+
+    <script>
+    var obj = {name:'Maria',age:20};
+    // console.log(obj);
+    // //通过对象.属性 获取对象的属性
+    // console.log(obj.name);
+    // console.log(obj.age);
+
+    // 找到id=content的元素
+    // 拼接一个字符串
+    //将字符串添加到id=content的元素中
+    var str ="";
+     str+='<td>'+obj.name+'</td>';
+     str+='<td>'+obj.age+'</td>';
+    // var content = document.getElementById('content');
+   var but = document.getElementById('but');
+   but.onclick = function(){
+       content.innerHTML=str;
+   }
+    </script>
+</body>
+</html>

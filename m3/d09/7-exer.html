@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>date-exer</title>
+</head>
+<body>
+    <!-- 在页面中显示当前的时间（时分秒) -->
+    <div id="show"></div>
+    <script>
+    window.onload = function(){
+        var div = document.getElementById('show');
+        //获取当前的时间对象，从当前时间对象中获取 h m s
+    function addZero(num){
+        return num<10? "0"+num:num;
+    }
+    function getTime(){
+        var dt = new  Date();
+        var hour = addZero(dt.getHours()) ;
+        var minute = addZero(dt.getMinutes()) ;
+        var second = addZero(dt.getSeconds()) ;
+        var str = hour+':'+minute+':'+second;
+        div.innerText = str;
+    }  
+    getTime();
+    var timer = setInterval(getTime,1000);
+
+        //自动刷新页面
+        // var timer = setInterval(function(){location.reload();},1000);
+        //页面每次刷新都会向服务器发送请求 反复刷新会发送大量的“无效”请求  不建议使用
+
+    }
+    </script>
+</body>
+</html>

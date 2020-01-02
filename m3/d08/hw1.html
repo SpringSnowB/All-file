@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hw-1</title>
+    <style>
+    #menu_ul{
+        width:500px;
+        height: 50px;
+        /* border: 2px solid teal; */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu{
+        width: 125px;
+        height: 50px;
+        /* border: 1px solid palevioletred; */
+        display: inline-block;
+        font-size: 20px;
+        float: left;
+        text-align: center;
+        line-height: 50px;
+    }
+    .menu:hover{
+        cursor: pointer;
+    }
+    .menu_click{
+        background-color: rgb(80, 139, 228);
+        color: aliceblue;
+    }
+    .menu_display{
+
+    }
+    .menu_noplay{
+        display: none;
+    }
+    #word1,#word2,#word3,#word4{
+        width: 500;
+        position: relative;
+        float: left;
+    }
+    .content{
+        width: 500px;
+        height: 40px;
+        border-bottom: 2px dotted slategray;
+        line-height: 40px;
+    }
+
+    .p_content{
+        width: 500;
+        position: relative;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:link{
+        color: rgb(128, 128, 211);
+        margin-left: 10px;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+    a:active{
+        color:red;
+    }
+    a:visited{
+        color: rgb(74, 74, 182);
+    }
+    .span_date{
+        position: absolute;
+        right: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <ul id="menu_ul">
+        <li id="d1" class="menu menu_click">热点新闻</li>
+        <li id="d2" class="menu">合作播报</li>
+        <li id="d3" class="menu">行业资讯</li>
+        <li id="d4"class="menu">运营攻略</li>
+    </ul>
+
+    <div id="word1">
+        <div class="content">
+            <p class="p_content">
+                <a href="http://www.baidu.com">[热点新闻]</a>
+                加盟网络棋牌游戏的注意事项
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+        <div class="content">
+            <p class="p_content">
+                <a href="http://news.baidu.com/">[热点新闻]</a>
+                可以勾选你需要的图像并展示
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+        <div class="content">
+            <p class="p_content">
+                <a href="">[热点新闻]</a>
+                菜单栏上Mac测色计应用工具
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+        <div class="content">
+            <p class="p_content">
+                <a href="">[热点新闻]</a>
+                获得屏幕当前的颜色值
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="word2" class="menu_noplay">
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[合作播报]</a>
+                    软件的准确快速获取方法
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[合做播报]</a>
+                    可以勾选你需要的图像并展示
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[合做播报]</a>
+                    菜单栏上Mac测色计应用工具
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[合做播报]</a>
+                    获得屏幕当前的颜色值
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+        </div>
+
+    <div id="word3" class="menu_noplay">
+        <div class="content">
+            <p class="p_content">
+                <a href="">[行业资讯]</a>
+                软件的准确快速获取方法
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+        <div class="content">
+            <p class="p_content">
+                <a href="">[行业资讯]</a>
+                可以勾选你需要的图像并展示
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+        <div class="content">
+            <p class="p_content">
+                <a href="">[行业资讯]</a>
+                菜单栏上Mac测色计应用工具
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+        <div class="content">
+            <p class="p_content">
+                <a href="">[行业资讯]</a>
+                获得屏幕当前的颜色值
+                <span class="span_date">2019-09-10</span>
+            </p>
+        </div>
+    </div>
+    
+    <div id="word4" class="menu_noplay">
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[运营攻略]</a>
+                    软件的准确快速获取方法
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[运营攻略]</a>
+                    可以勾选你需要的图像并展示
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[运营攻略]</a>
+                    菜单栏上Mac测色计应用工具
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+            <div class="content">
+                <p class="p_content">
+                    <a href="">[运营攻略]</a>
+                    获得屏幕当前的颜色值
+                    <span class="span_date">2019-09-10</span>
+                </p>
+            </div>
+        </div>
+        <script>
+        var word1 =document.getElementById('word1');
+        var word2 =document.getElementById('word2');
+        var word3 =document.getElementById('word3');
+        var word4 =document.getElementById('word4');
+        var d1=document.getElementById('d1');
+        var d2=document.getElementById('d2');
+        var d3=document.getElementById('d3');
+        var d4=document.getElementById('d4');
+        d1.onclick=function(){
+            d1.setAttribute('class','menu menu_click');
+            d2.setAttribute('class','menu');
+            d3.setAttribute('class','menu');
+            d4.setAttribute('class','menu');
+            word1.setAttribute('class','menu_display');
+            word2.setAttribute('class','menu_noplay');
+            word3.setAttribute('class','menu_noplay');
+            word4.setAttribute('class','menu_noplay');
+        }
+
+        d2.onclick=function(){
+            d2.setAttribute('class','menu menu_click');
+            d1.setAttribute('class','menu');
+            d3.setAttribute('class','menu');
+            d4.setAttribute('class','menu');
+            word1.setAttribute('class','menu_noplay');
+            word2.setAttribute('class','menu_display');
+            word3.setAttribute('class','menu_noplay');
+            word4.setAttribute('class','menu_noplay');
+        }
+
+        d3.onclick=function(){
+            d3.setAttribute('class','menu menu_click');
+            d1.setAttribute('class','menu');
+            d2.setAttribute('class','menu');
+            d4.setAttribute('class','menu');
+            word1.setAttribute('class','menu_noplay');
+            word3.setAttribute('class','menu_display');
+            word2.setAttribute('class','menu_noplay');
+            word4.setAttribute('class','menu_noplay');
+        }
+        d4.onclick=function(){
+            d4.setAttribute('class','menu menu_click');
+            d1.setAttribute('class','menu');
+            d3.setAttribute('class','menu');
+            d2.setAttribute('class','menu');
+            word1.setAttribute('class','menu_noplay');
+            word4.setAttribute('class','menu_display');
+            word3.setAttribute('class','menu_noplay');
+            word2.setAttribute('class','menu_noplay');
+        }
+        </script>
+</body>
+</html>

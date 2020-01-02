@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOM</title>
+</head>
+<body>
+    <button id="btn">
+        delete
+    </button>
+    <script>
+    //确认框
+    //当btn 被点击时 弹出确认框 提醒用户 确认
+    window.onload = function(){
+        //查找btn
+        var btn = document.getElementById('btn');
+        btn.onclick= function() {
+            var isDel = confirm("are you scure");
+            console.log(isDel);
+            if(isDel){
+                alert('finish');
+            }
+        }
+    }
+    </script>
+</body>
+</html>

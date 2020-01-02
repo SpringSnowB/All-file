@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hw2</title>
+    <style>
+     #bg,#lbtn,#rbtn{
+         float: left;
+     }
+
+    #bg{
+        width: 738px;
+        height: 418px;
+        border: 1px solid rgb(216, 147, 57);
+        position: relative;
+        background-image: url("imgs/gm1-6.jpg");
+    }
+     
+    #lbtn,#rbtn{
+        position: absolute;
+        font-size: 50px;
+        background-color: rgb(121, 138, 231);
+        width: 40px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        top: 179px;
+    }
+    #lbtn:hover,#rbtn:hover{
+        cursor: pointer;
+    }
+   #lbtn{
+        left: 0;
+    }
+    #rbtn{
+        right: 0;
+    }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <span id="lbtn">&lt;</span>
+        <span id="rbtn">&gt;</span>
+    </div>
+
+
+<script>
+var imgs = ['imgs/gm1-6.jpg','imgs/gm2-6.jpg','imgs/gm3-6.jpg','imgs/gm4-6.jpg','imgs/gm5-6.jpg'];
+var bg=document.getElementById('bg');
+var lbtn=document.getElementById('lbtn');
+var rbtn=document.getElementById('rbtn');
+var i=0;
+var j = 5;
+function changeImg(picture){
+var bgimg='background-image: url('+picture+')';
+bg.setAttribute('style',bgimg);
+}
+lbtn.onclick=function(){
+    console.log(imgs[window.i]);
+    for(;;window.i++){
+    if (window.i==6)
+    window.i=0;
+    changeImg(imgs[window.i]);
+}
+}
+rbtn.onclick=function(){
+    console.log(imgs[window.j]);
+    for(;;window.j--){
+    if (window.j==-1)
+    window.j=0;
+    changeImg(imgs[window.j]);
+}
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script>
+    var reg1 = /test/ig;
+    var reg2 =new RegExp ('test','ig');
+    var str = 'this is a test string';
+    // console.log(reg1.lastIndex);//0
+    // console.log(reg1.test(str));//调用正则表达式的test方法 如果能找到返回true否则返回False;
+    // console.log(reg1.lastIndex);//14
+    // console.log(reg1.test(str)); //执行过一次后，lastindex有所改变   手动设置reg1.lastindex = 0
+
+
+    //字符串的match()方法
+    console.log(str.match(reg2)) ;
+    console.log(str.replace(reg2,'o-o|'));
+    </script>
+</body>
+</html>

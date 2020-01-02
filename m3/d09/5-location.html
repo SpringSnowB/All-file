@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>location</title>
+</head>
+<body>
+    <button id="btn">gotmooc</button>
+    <script>
+    //location保存浏览器地址栏相关内容
+    console.log(location.href);
+    var btn = document.getElementById('btn');
+    btn.onclick= function(){
+        //直接对href赋值 相当于跳转到该地址
+        location.href='http://tmooc.cn';
+    }
+    </script>
+</body>
+</html>

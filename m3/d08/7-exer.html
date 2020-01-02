@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exer</title>
+    <style>
+    #content{
+        width: 250px;
+    }
+    #p1 span{
+        color: rgb(192, 34, 192);
+    }
+    </style>
+</head>
+<body>
+<div id="content">
+    <input type="text" id="txt">
+    <button id="btn">search</button>
+    <p id="p1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis saepe delectus, a rerum dolores exercitationem perferendis deserunt, harum cupiditate, cum deleniti ipsa eius quasi? Aperiam consequuntur quibusdam quas ullam eveniet?
+    </p>
+</div>
+
+    <script>
+        var txt=document.getElementById('txt');
+        var btn = document.getElementById('btn');
+        var par = document.getElementById('p1');
+        
+        btn.onclick=function(){
+            var val = txt.value;
+            var new_val = '<span>'+val+'</span>';
+            par.innerHTML=par.innerHTML.replace(val,new_val);
+        }
+        
+
+
+
+
+    // var email = 'tszxwsb@163.com';//要求输出 用户名 服务商
+    // var name =  email.split('@')[0];
+    // var server = email.split('@')[1];
+    // console.log(name+":"+server);
+    </script>
+</body>
+</html>

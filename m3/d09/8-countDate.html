@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>countDate</title>
+</head>
+<body>
+    <div id="show"></div>
+
+    <script>
+  var div = document.getElementById('show');
+    function addZero(num){
+        return num<10? "0"+num:num;
+    }
+    //倒计时
+function getcountDate(){
+    var dt_now = new Date();
+    var dt_18 = new Date('2020-1-3 18:0:0');
+    letftime = dt_18 - dt_now;
+    var day = addZero(Math.floor(letftime/1000/24/3600))
+    var hour = addZero(Math.floor(letftime/1000/3600%24));
+    var minute = addZero(Math.floor(letftime/1000%3600/60));
+    var second = addZero(Math.floor(letftime/1000%3600%60));
+    var str =day+"天"+ hour+':'+minute+':'+second;
+    div.innerText = str;
+}
+
+getcountDate();
+var timer = setInterval(getcountDate,1000);
+
+    
+
+
+    </script>
+</body>
+</html>

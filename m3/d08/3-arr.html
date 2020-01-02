@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arry</title>
+</head>
+<body>
+    <script>
+    var arr = [4,0,7,5,9,0,0,4,2,5,0]    
+    var arr2 = new Array();
+    // for(i=0;i<arr.length;i++){
+    //     if (arr[i]!=0)
+    //     arr2.push(arr[i]);
+    // }
+    for (var i in arr){  //i表示数组的索引
+        
+        if (arr[i]!=0)
+        arr2.push(arr[i]);
+    }
+    console.log(arr2);
+    </script>
+</body>
+</html>

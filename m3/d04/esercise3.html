@@ -23,15 +23,30 @@
         display: inline-block;
     }
     .c1:hover{
+        /* color:white;
+        background-color:rgb(223, 10, 46);
+        transition: 0.5s; */
+        cursor:pointer;
+    }
+    .c2{
         color:white;
         background-color:rgb(223, 10, 46);
-        transition: 0.5s;
-        cursor:pointer;
     }
     #d1{
         color: rgba(127, 129, 131, 0.856);
     }
     </style>
+    <script>
+        var lis = document.getElementsByClassName('c1');
+        console.log(lis);
+        for (var i =1;i<lis.length;i++){
+            lis[i].onclick  =function(){
+                //当循环时没有点击函数 点击事件是在循环结束之后 循环结束之后 i的值已经发生变化了
+             this.setAttribute('class','c1 c2');//this表示当前的lis 被点击的lis是哪个 就表示谁 类似于python中的self
+        }
+   
+    }
+    </script>
 </head>
 <body>
     <div>
@@ -41,6 +56,5 @@
         <div class="c1">中级</div>
         <div class="c1">高级</div>
     </div>
-    
 </body>
 </html>

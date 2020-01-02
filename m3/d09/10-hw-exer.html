@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手动刷新图片</title>
+    <style>
+    #parent{
+        width: 739px;
+        height: 419px;
+        position: relative;
+    }
+
+    .lr{
+        position: absolute;
+        top: 188.5px;
+    }
+    .lr:hover{
+        cursor: pointer;
+    }
+
+    #limg{
+        left: 0;
+    }
+    #rimg{
+        right: 0;
+    }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <img id="bgimg" src="imgs/gm1-6.jpg" alt="">
+        <img id="limg" class="lr" src="imgs/l1-6.png" alt="">
+        <img id="rimg" class="lr" src="imgs/r1-6.png" alt="">
+    </div>
+<script>
+var bgimg = document.getElementById('bgimg');
+var limg = document.getElementById('limg');
+var rimg = document.getElementById('rimg');
+
+var img_arr=['imgs/gm1-6.jpg','imgs/gm2-6.jpg','imgs/gm3-6.jpg','imgs/gm4-6.jpg','imgs/gm5-6.jpg']
+
+limg.onclick = function(){
+    index = img_arr.indexOf(bgimg.getAttribute('src'));
+    console.log(index);
+    index==0? bgimg.setAttribute('src',img_arr[img_arr.length-1]):bgimg.setAttribute('src',img_arr[index-1]);
+}
+rimg.onclick=function(){
+    index = img_arr.indexOf(bgimg.getAttribute('src'));
+    console.log(index);
+    index==img_arr.length-1? bgimg.setAttribute('src',img_arr[0]):bgimg.setAttribute('src',img_arr[index+1]);
+}
+
+</script>
+
+</body>
+</html>
