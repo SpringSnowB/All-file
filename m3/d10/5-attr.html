@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#" id="action">
+    <div>user
+        <input type="text" id="uname".name= :]uname>
+       
+    </div>
+     <div>pswd
+         <input type="password " id='upwd' name = 'upwd' >
+     </div>
+     <div>
+        <input type="checkbox"checkbox id='isSave' name="isSane" >
+        记住密码
+    </div>
+    <input type="submit" value="登录">
+    </form>
+    <script src='js/jquery.min.js'> </script>
+    <script>
+//获取复选框的chcked的属性
+console.log($('#isSave').attr('checked'));
+console.log($('#isSave').prop('checked'));
+
+//查看页面最后一个input控件
+console.log($('input:last').attr('value'));
+$('input:last').removeAttr('value');
+console.log($('input:last').prop('value'));
+    //查看密码框的属性name
+    console.log($('#uname').attr('name'));
+    //将密码框的name改成password
+    $('#upwd').attr('name','password');
+    console.log($('#upwd').prop('name'));
+    </script>
+</body>
+</html>

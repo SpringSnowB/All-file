@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create</title>
+</head>
+<body>
+    <div id="content" style="border: 1px solid pink">
+        <h3>div中原本的内容</h3>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var d1 = $('<div></div>');
+        d1.html('动态创建的div中的内容').css('color','red');
+        console.log(d1[0]);
+        //向content添加d1
+        $('#content').append(d1);//在末尾添加
+        // $('#content').prepend(d1);//在开头添加
+        
+        //作为content兄弟元素添加
+        // $('#content').after(d1);//在后面
+        // $('#content').before(d1);//在前面
+
+        //移除页面元素
+        $('h3').remove();
+        
+    </script>
+</body>
+</html>

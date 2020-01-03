@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>val</title>
+</head>
+<body>
+    <input type="text" id="uname">
+    <button id="btn">click</button>
+    <div id="show"></div>
+
+    <script src="js/jquery.min.js"></script>    
+
+    <script>
+    //获取文本框的值 当点击btn时，将文本框的值放在div中显示
+    $('#btn')[0].onclick = function(){
+        $('#show').html($('#uname').val());
+            
+    }
+    </script>
+</body>
+</html>

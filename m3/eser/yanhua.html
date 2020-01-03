@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>烟花</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(14, 13, 13);
+            overflow: hidden;
+        }
+        .firework{
+            width: 10px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+    
+    </style>
+</head>
+<body>
+    <script>
+        //生成子弹
+        document.onclick = function(ev){
+            var ev = ev||window.event;
+            var x = ev.clientX,
+                    y = ev.clientY;
+            var h = window.innerHeight;
+            //生成烟花
+            firework(x,y,h);
+        }
+
+    function firework(x,y,h){
+        var oDiv = document.createElement('div');
+        oDiv.className = "firework";
+        oDiv.style.left = x+"px";
+        oDiv.style.top = h +"px";
+        document.body.appendChild(oDiv);
+    }
+    </script>
+</body>
+</html>

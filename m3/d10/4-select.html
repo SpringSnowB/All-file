@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>select</title>
+</head>
+<body>
+    <ul id="parent">
+        <li xlass= 'active'></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    // 找到parent下的所有li，为其添加样式
+    //宽100% 高50px bgc 
+    $('#parent>li').css({
+        //JSON对象
+       'width':'100%',
+        'height':'50px',
+        'background-color':'pink',
+        'border':'1px soild red'
+    })
+    // // 带有active类的元素后面第一个li
+    // $('.active+li').css('background','red');
+    //     //active类后面所有的li
+    // $('.active>li').css('background','red');
+
+    // $('li:first').css('background','red');//第一个li
+
+    //找到偶数下标的元素
+    $('li:odd').css('background','red');
+
+    // $('li:not(.active)').css('background','yellowgreen');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+   <!-- 引入外部的jQuery文件 -->
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        var d1 = document.getElementById('d1');
+        console.log(d1);//DOM对象
+        var $d1 = $('d1'); //工厂函数
+        console.log($d1);//jQuery 对象
+        var d3 = $('div');//通过元素选择器查找元素
+        console.log(d3);
+
+
+        //把DOM对象变成jQuery对象
+        console.log($(d1));
+
+        //将jQuery对象变成DOM对象
+        console.log($d1[0]);
+        console.log($d1.get(0));
+    </script>
+</body>
+</html>

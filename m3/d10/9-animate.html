@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animate</title>
+    <style>
+    #bal{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color:teal;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div id="bal"></div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    $('#bal').animate({
+        'left':'300px',
+        'top':'50px',
+        'background-color':'green'
+    },2000,function(){
+        $('#bal').animate({
+            'left':'5px',
+            'top':'5px'
+        },2000,function(){
+            $('#bal').fadeOut(1000);
+        });
+    });
+    </script>
+</body>
+</html>

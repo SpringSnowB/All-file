@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>click</title>
+</head>
+<body>
+    <button id="btn">click me</button>
+
+    <script>
+    window.onload = function(){
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            alert('hello word');
+        }
+        var timer = setTimeout(function(){
+          btn.click();  
+        },3000);
+        
+    }
+    
+    </script>
+</body>
+</html>

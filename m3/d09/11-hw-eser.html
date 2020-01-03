@@ -47,8 +47,29 @@ function leftChange(){
     index==0? bgimg.setAttribute('src',img_arr[img_arr.length-1]):bgimg.setAttribute('src',img_arr[index-1]);
 }
 
-var timer = setInterval(leftChange,3000)
+var timer; 
 
+//鼠标移入时表示用户想要操作或查看  停止定时器
+// onmouseover
+//鼠标移出时 表示用户操作或查看完毕  启动定时器
+//onmouseout
+
+var div = document.getElementById('parent');
+div.onmouseout= function(){
+   timer = setInterval(leftChange,1500);
+}
+
+div.onmouseover = function(){
+ clearInterval(timer);
+}
+
+limg.onclick = leftChange();
+
+rimg.onclick=function(){
+    index = img_arr.indexOf(bgimg.getAttribute('src'));
+    console.log(index);
+    index==img_arr.length-1? bgimg.setAttribute('src',img_arr[0]):bgimg.setAttribute('src',img_arr[index+1]);
+}
 </script>
 
 </body>

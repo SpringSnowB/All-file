@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animate</title>
+</head>
+<body>
+    <div id="imgs">
+        <img src="../d09/imgs/gm1-6.jpg" alt="">
+    </div>
+    <button class='btn'>隐藏</button>
+    <button class="btn2">上推</button>
+    <button class="btn3">淡隐</button>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $('.btn').on('click',function(){
+        //判断按钮的内容，如果是隐藏就调用hide否则调用show
+        if($('.btn').html()=='隐藏'){
+            $('img').hide(2000,function(){
+            $('.btn').html('显示'); 
+            });
+        }
+        else {
+            $('img').show(2000,function(){
+                $('.btn').html('隐藏');
+            });
+        } 
+    });
+
+    $('.btn2').bind('click',function(){
+        if($('.btn2').html()=='上推'){
+            $('#imgs').slideUp(1500,function(){
+               $('.btn2').html('下拉');
+            });   
+        }else{
+            $('#imgs').slideDown(1500,function(){
+               $('.btn2').html('上推');
+            });   
+        }
+    });
+
+    $('.btn3').click(function(){
+        if($('.btn3').html()=='淡隐'){
+            $('#imgs').fadeOut(1500,function(){
+               $('.btn3').html('淡现');
+            });   
+        }else{
+            $('#imgs').fadeIn(1500,function(){
+               $('.btn3').html('淡隐');
+            });   
+        }
+    });
+</script>
+</html>
