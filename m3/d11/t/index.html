@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body>
+    <h1>this is index for flask</h1>
+    {#模板中的注释
+    <div>姓名:{{context["name"]}}</div>
+    <div>年龄:{{context["age"]}}    <!--表示页面变量-->
+    </div>#}
+    <div>name:{{name}}</div>
+    <div>age:{{age}}</div>
+    <div>address:{{address}}</div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>content</th>
+        </tr>
+        {%for item in mylist%}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.content}}</td>
+        </tr>
+       {%endfor %}
+    </table>
+</body>
+</html>

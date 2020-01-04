@@ -9,8 +9,8 @@
 <body>
     <form action="">
         <select name="prov" id="prov" ></select>
-        <select name="city" city="city"></select>
-        <select name="area" city="area"></select>
+        <select name="city" id="city"></select>
+        <select name="area" id="area"></select>
     </form>
     <script src="js/jquery.min.js"></script>
     <script src="js/data.js"></script>
@@ -33,7 +33,7 @@
         $.each(data,function(i,e){
             if($prov.val() ==e.provId){
                 $city.html("<option value='0'>请选择</option>");
-                $.each(e.citys,function(i,e2){
+                $.each(e.citys,function(i2,e2){
                     $city.append("<option value='"+e2.cityId+"'>"+e2.cityname+"</option>");
 
                 })
@@ -52,10 +52,10 @@
     $city.on("change",function(){
         $.each(data,function(i,e){
             if($prov.val() ==e.provId){
-                $.each(e.citys,function(i,e2){
+                $.each(e.citys,function(i2,e2){
                     if($city.val()==e2.cityId){
                         $area.html("");
-                        $each(e2.area,function(i,e3){
+                        $each(e2.areas,function(i3,e3){
                             $area.append("<option value='"+e3.cityId+"'>"+e3.cityname+"</option>");
                         })
                     }
