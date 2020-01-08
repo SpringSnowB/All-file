@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+</head>
+<body>
+<div>
+    <input type="text" id="num1">
+</div>
+<div>
+    <select name="" id="opt">
+        <option value="1">加</option>
+        <option value="0">减</option>
+    </select>
+</div>
+<div>
+    <input type="text" id="num2">
+</div>
+<button id="btn">计算</button>
+<div id="show"></div>
+<!--<script src="../static/common.js"></script>-->
+<script>
+    var xhr = new XMLHttpRequest();
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        var num1 = document.getElementById('num1');
+        var num2 = document.getElementById('num2');
+        var opt = document.getElementById('opt');
+        var url = '/calcSever?num1='+num1.value+'&opt='+opt.value+'&num2='+num2.value;
+        xhr.open('get',url,true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4&&xhr.status==200){
+                    var show = document.getElementById('show');
+                    show.innerHTML=xhr.responseText;
+                }
+        }
+        xhr.send(null)
+    }
+</script>
+</body>
+</html>

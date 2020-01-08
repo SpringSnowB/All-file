@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-post</title>
+</head>
+<body>
+<div>姓名：<input type="text" id="name"></div>
+<div>年龄：<input type="text"id="age"></div>
+<div>邮箱：<input type="text"id="email"></div>
+<button id="btn">提交</button>
+<div id="show"></div>
+<script src="../static/common.js"></script>
+<script>
+
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        xhr.open('POST','/postServer',true);
+        xhr.onreadystatechange = function(){
+        if(xhr.readyState==4&&xhr.status==200){
+            var div = document.getElementById('show');
+            div.innerHTML = xhr.responseText;
+        }
+        };
+    var name = document.getElementById('name').value;
+    var age = document.getElementById('age').value;
+    var email = document.getElementById('email').value;
+    var str = 'name='+name+'&age='+age+'&email='+email;
+    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');//设置请求头
+    xhr.send(str);
+    }
+
+</script>
+</body>
+</html>

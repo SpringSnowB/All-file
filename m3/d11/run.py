@@ -36,6 +36,6 @@ def show_birthday(year,month,day):
     return "your birthday is %s-%s-%s"%(year,month,day)
 
 if __name__=='__main__':
-    # run(host = None,port = None,debug = None)
+    # templates(host = None,port = None,debug = None)
     app.run(debug=True)  #http://127.0.0.1:5000/当前参数的默认地址
 

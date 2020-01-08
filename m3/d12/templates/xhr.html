@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xhr</title>
+</head>
+<body>
+<h1>xhr</h1>
+<div id="show"></div>
+<script src="../static/common.js"></script>
+<script>
+    console.log(xhr);
+    // 通过xhr对象创建对象
+    xhr.open('get','http://127.0.0.1:5000/getServer',true);
+    // 监听xhr.readyState的值，每次值发生改变都会触发onreadystatechange事件
+    xhr.onreadystatechange= function (){
+        if(xhr.readyState == 4 && xhr.status ==200){
+            document.getElementById('show').innerHTML = xhr.responseText
+        }
+        //  if(xhr.readyState==4){
+        //     console.log('获取响应结果完成')
+        //     // 判断响应结果的状态 如果响应状态码为200表示一切正常 这时可以获取响应结果
+        //     if(xhr.status == 200){
+        //         console.log(xhr.responseText)
+        //         document.getElementById('show').innerHTML = xhr.responseText
+        //     }
+        // }
+    }
+    //发送请求
+    xhr.send(null);
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+</head>
+<body>
+<input type="text" id="uname">
+<button id="btn">发送gei请求</button>
+<div id="show"></div>
+
+<script src = '../static/common.js'></script>
+<script>
+    // 创建xhr对象
+    // var xhr =new XMLHttpRequest();
+    // 创建请求
+    //获取文本框
+    var uname = document.getElementById('uname');
+    var btn = document.getElementById('btn');
+    btn.onclick=function(){
+        var url = '/getServer?uname='+uname.value;
+        xhr.open('get',url,true)
+        // 监听事件 处理响应结果
+        xhr.onreadystatechange = function () {
+           if(xhr.readyState ==4&&xhr.status==200){
+               var div = document.getElementById('show');
+               div.innerHTML = xhr.responseText;
+           }
+        }
+        //发送请求
+        xhr.send(null)
+    }
+</script>
+</body>
+</html>
