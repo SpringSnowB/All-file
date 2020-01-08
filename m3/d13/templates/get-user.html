@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取用户</title>
+</head>
+<body>
+<button id="btn">显示用户信息</button>
+<table border="1" cellpadding="0">
+    <tr>
+        <td>id</td>
+        <td>username</td>
+        <td>pwd</td>
+    </tr>
+    <tbody id="show">
+
+    </tbody>
+</table>
+
+<script src="../static/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('#btn').click(function () {
+            var xhr =new XMLHttpRequest();
+            xhr.open('get','/get_user_server',true);
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState==4&&xhr.status==200){
+                    var data = xhr.responseText;
+                    var json_obj = JSON.parse(data);
+                    var html='';
+                    $.each(json_obj, function (i,e) {
+                        html+='<tr>';
+                        html+="<td>"+e.id+"</td>";
+                        html+="<td>"+e.name+"</td>";
+                        html+="<td>"+e.pwd+"</td>";
+                        html+='</tr>';
+                    });
+
+                    // var data = xhr.responseText.split('|');
+                    // var html='<tr>';
+                    // for(var i=0;i<data.length;i++){
+                    //     for(var j=0;j<data[i].split('_').length;j++){
+                    //         html+='<td>'+data[i].split('_')[j]+'</td>'
+                    //     }
+                    //     html+='</tr>'
+                    // }
+                    $("#show").html(html)
+                }
+            };
+            xhr.send(null);
+        })
+    })
+</script>
+</body>
+</html>

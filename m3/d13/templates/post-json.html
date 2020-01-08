@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post-json</title>
+</head>
+<body>
+<div>姓名：<input type="text" id="uname"></div>
+<div>密码：<input type="text" id="pwd"></div>
+<button id="btn">提交</button>
+<div id="show"></div>
+
+<script src="../static/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+         //获取姓名和密码的值
+        var data = {"uname":$("#uname").val(),"pwd":$("#pwd").val()};
+        var json_str = JSON.stringify(data);
+        var xhr = new XMLHttpRequest();
+        xhr.open('post','/post_json_server',true);
+        xhr.onreadystatechange=function () {
+            if(xhr.readyState==4&&xhr.status==200){
+                var result = JSON.parse(xhr.responseText);
+                if(result.code==200){
+                     $("#show").html(result.msg).css('color','green');
+                }else{
+                    $("#show").html(result.msg).css('color','yello');
+                }
+                // if(xhr.responseText=='ok'){
+                //
+                // }
+            }
+        }
+        // 'application/x-www-form-urlencoded'是表单数据的提交格式
+        // xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            xhr.setRequestHeader('Content-Type','application/json');
+        xhr.send(json_str);
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+<div>
+    姓名：<input type="text" id="uname">
+    <span id="show"></span>
+</div>
+<div>
+    密码：<input type="text" id="pwd">
+</div>
+<button id="btn">注册</button>
+<script src="../static/jquery.min.js"></script>
+<script>
+    $(function () {
+        function checkusername() {
+            //reg用于校验用户是否被使用 默认false表示未被使用
+            var res = false;
+            var xhr = new XMLHttpRequest();
+            var url = '/check_uname?uname='+$('#uname').val();
+            xhr.open('get',url,false);//异步等待
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4&&xhr.status==200){
+                    // $('#show').html(xhr.responseText);
+                    if(xhr.responseText=='1'){
+                        res=true;
+                        $("#show").html('用户名已存在');
+                    }
+                    else{
+                        $("#show").html('ok');
+                        }
+                }
+            };
+            xhr.send(null);
+            return res;
+        }
+        $('#uname').blur(function () {
+           checkusername();
+        });
+        $('#btn').click(function () {
+                    if (checkusername()){
+                        alert('用户名已存在')
+                    }
+                    else {
+                        alert('继续注册')
+                    }
+                })
+    })
+</script>
+
+<!--</script>-->
+</body>
+</html>
