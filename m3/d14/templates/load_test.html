@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>load_test</title>
+</head>
+<body>
+    <h1>this is load_test page</h1>
+    <button id="btn">show_load_test_server</button>
+    <div id="show"></div>
+    <script src="../static/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                // 加载指定页面的全部内容到#show
+                // $("#show").load('/load_server')
+
+                // $("#show").load('/load_server #btn2');//加载指定页面的具体元素
+                //uname=pp&age=18 Query String查询字符串
+                // $("#show").load('/load_server','uname=pp&age=19')
+
+                // 使用json对象传惨 发送POST请求 如果服务器路由不接收post请求 响应状态码为405
+                // Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+                // $("#show").load('/load_server',{uname:"pp"})
+
+                // $("#show").load('/load_server',function () {
+                //     alert('I am callback function')
+                // })
+
+                $("#show").load('http:www.taobao.com')
+
+            })
+        })
+    </script>
+</body>
+</html>

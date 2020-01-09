@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cross</title>
+</head>
+<body>
+<button id="btn">跨域请求</button>
+<div id="show"></div>
+<script src="../static/jquery.min.js"></script>
+<script>
+    function print(data){
+        console.log(data)
+    }
+
+    $(function () {
+        $("#btn").click(function () {
+            $.ajax({
+                url:'http://127.0.0.1:5001/get_json',
+                type:'get',
+                dataType:'jsonp',
+                jsonp:'callback',
+                jsonpCallback:'print'
+                // success:function (data) {
+                //     console.log(data);
+                // }
+            })
+        })
+    })
+
+    /*$(function () {
+        $("#btn").click(function () {
+            // $.get('http://127.0.0.1:5001/get',function (data) {
+            //     console.log(data);
+            // })
+            //js原生跨域
+            // 创建一个script标签 通过src属性请求服务器地址
+            var script = document.createElement('script');
+            script.src='http://127.0.0.1:5001/get?callback=print';
+            // 在请求过程中提供一个函数名
+            // 服务器端接收函数名 将服务器的数据和函数名拼接
+            // '函数名('+数据+')'
+            // 将script标签插入到body中
+            document.body.append(script);
+        })
+    })*/
+</script>
+</body>
+</html>
