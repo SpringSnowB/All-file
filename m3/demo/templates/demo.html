@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <style>
+        div{
+            border: 1px solid deeppink;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style
+        ="height: 2000px;
+        background-color: lightskyblue">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">.col-md-6</div>
+<!--        一直保持初始布局方式-->
+        <div class="col-xs-6 col-sm-6 col-md-6">.col-md-6</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">.col-md-4</div>
+<!--        当页面过大时，独占一行-->
+        <div class="col-xs-12 col-sm-4 col-md-4">.col-md-4</div>
+        <div class="col-xs-12 col-sm-4 col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3">.col-md-3</div>
+        <div class="col-xs-6 col-sm-6 col-md-6">.col-md-6</div>
+        <div class="col-xs-3 col-sm-3 col-md-3">.col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-sm-10 col-md-10">.col-md-10</div>
+<!--        当页面过大时，隐藏元素-->
+        <div class="hidden-xs hidden-sm col-md-2">.col-md-2</div>
+    </div>
+    <h1>你好啊，<small>batun</small></h1>
+    <h1 class="h1">你好啊,<small class="small">batun</small> </h1>
+<!--    small标签是正常大小的85%-->
+    <h1 class="text-center">这是一段带有<mark>高亮</mark>的文本</h1>
+<!--    首字母大写-->
+    <h1 class="text-capitalize">ihd oidsdh hodsh dso</h1>
+<!--    全大写-->
+    <h1 class="text-uppercase">ajs I djasio ncos</h1>
+<!--    全小写-->
+    <h1 class="text-lowercase">IUHSD HUISD ASOI</h1>
+<!--    缩略语-->
+    <abbr title="Hight Text ">HT</abbr>
+
+<!--    地址-->
+    <address>
+        <strong>珠口市东大街6号 珍贝大厦</strong>
+        <br>
+        达内科技
+        <br>
+        email:<a href="tmooc.cn">www.tedu.com</a>
+    </address>
+
+<!--    引用-->
+<!--    左显示-->
+    <blockquotete>
+        <p>大道行之</p>
+        <footer>kaka</footer>
+    </blockquotete>
+<!--    右显示-->
+    <blockquote class="blockquote-reverse">
+        <p>大道行之</p>
+        <footer>kaka</footer>
+    </blockquote>
+
+    <ul class="list-unstyled">
+        <li>就撒大家就</li>
+        <li>多岁iudf的防御</li>
+        <li>键盘敲烂，月薪过万</li>
+    </ul>
+
+    <ul class="list-inline">
+        <li>就撒大家就</li>
+        <li>多岁iudf的防御</li>
+        <li>键盘敲烂，月薪过万</li>
+    </ul>
+
+    <dl class="dl-horizontal">
+        <dt>title</dt>
+        <dd>content</dd>
+        <dd>描述内容的补充</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>title</dt>
+        <dd>content</dd>
+        <dd>描述内容的补充</dd>
+    </dl>
+
+    </dl>
+    <dl >
+        <dt>title</dt>
+        <dd>content</dd>
+        <dd>描述内容的补充</dd>
+    </dl>
+    使用
+    <kbd>
+      <kbd>ctrl</kbd>+<kbd>v</kbd>
+    </kbd>对文本进行注释
+
+    <div class="table-responsive">
+    <table class="table-striped table-bordered table-hover">
+        <tr class="success">
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr class="active">
+            <td>Maria</td>
+            <td>18</td>
+        </tr>
+        <tr class="warning">
+            <td>QTX</td>
+            <td>20</td>
+        </tr>
+        <tr class="danger">
+            <td>SBW</td>
+            <td>21</td>
+        </tr>
+    </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-9 col-md-9"></div>
+        <div class="col-sm-3 col-md-3">
+            <form action="">
+                <div class="form-group">
+                    <lable for="uname">姓名</lable>
+                    <input type="text" id="uname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <lable for="pwd">密码</lable>
+                    <input type="password" id="pwd" class="form-control">
+                </div>
+                <div class="checkbox">
+                    <label for="">
+                        <input type="checkbox">
+                        click me
+                        <span class="glyphicon glyphicon-leaf"></span>
+                    </label>
+                </div>
+                <input type="submit" class="btn btn-info" value="login">
+
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</body>
+</html>

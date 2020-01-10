@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get_data_list</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>SUP_ID</th>
+        <th>name</th>
+        <th>caption</th>
+        <th>price</th>
+        <th>create_time</th>
+        <th>update_time</th>
+    </tr>
+    <tbody id="content"></tbody>
+</table>
+<script src="../static/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url:'/get_data_list_server',
+            type:'get',
+            dataType:'json',
+            success:function (data) {
+                var html ="";
+                $.each(data,function (i,obj) {
+                    html +="<tr>"
+                    html +="<td>"+obj.fields.SPU_ID+"</td>";
+                    html +="<td>"+obj.fields.name+"</td>";
+                    html +="<td>"+obj.fields.caption+"</td>";
+                    html +="<td>"+obj.fields.price+"</td>";
+                    html +="<td>"+obj.fields.create_time.split("T")[0]+"</td>";
+                    html +="<td>"+obj.fields.update_time.split("T")[0]+"</td>";
+                    html +="</tr>";
+                });
+                console.log(html);
+                $("#content").html(html);
+            }
+        })
+    })
+</script>
+</body>
+</html>
