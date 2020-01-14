@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_params</title>
+</head>
+<body>
+<h1>str {{ str }} int {{ int }}
+    <br>
+    list {{ list }}
+    <br>
+    list[0] {{ list.0 }}
+    <br>
+    dict {{ dict }}
+    dict[name] {{ dict.name }}
+    dict age +10 {{ dict.age|add:'10' }}
+</h1>
+<br>
+<h1>function {{ say_hi }}
+    <br>
+class {{ class_obj.say }}
+</h1>
+<br>
+{#<h1>script   {{ script|safe }}</h1>#}
+<br>
+<h1>循环
+    {% for f in list %}
+        {% if forloop.last %}===={% endif %}
+    {{ forloop.counter0 }}name:{{ f }}
+        {% empty %}
+        sorry not data
+    {% endfor %}
+</h1>
+</body>
+</html>

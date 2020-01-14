@@ -19,6 +19,7 @@ from . import views
 
 #该配置项将子行而下逐一匹配 若某行配置上，则终止向下匹配行为
 urlpatterns = [
+    #url(正则,视图函数,name = 别名)
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.index_view),
     # http://127.0.0.1:8000/page1
