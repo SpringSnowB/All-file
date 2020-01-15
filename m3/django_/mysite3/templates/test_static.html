@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_static</title>
+</head>
+<body>
+<h1>hioshhhsaiofhs</h1>
+<img src="../static/img/lena.jpg" alt="" style="height: 100px;width: 100px;">
+
+{% load static %}
+<img src="{% static 'img/lena.jpg' %}" alt="" style="height: 100px;width: 100px;">
+</body>
+</html>

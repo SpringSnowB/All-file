@@ -4,65 +4,55 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
     <script src="../static/js/jquery.min.js"></script>
-    <style>
-        body{
-            position: relative;
-        }
-        #menu{
-            position: absolute;
-            top: 0;
-            height: 100px;
-            width: 980px;
-            background-color: rgba(29, 12, 20, 0.88);
-            line-height: 100px;
-        }
-
-        .logo, .logo:hover{
-            float: left;
-            text-decoration: none;
-            color: white;
-            position: absolute;
-            right: 0;
-        }
-        .logo:hover{
-            cursor: pointer;
-        }
-
-        #content{
-            border:1px solid pink;
-            height: 500px;
-        }
-        #music{
-            height: 100px;
-            width: 200px;
-            line-height: 100px;
-            text-align: center;
-            position: relative;
-        }
-        #music_img{
-            float:left;
-        }
-
-    </style>
 </head>
 <body>
-    <div id="menu">
-        <div id="music">
-            <h1>
-                <span id="music_img" class="glyphicon glyphicon-leaf"></span>
-                <a class="logo" href="https://music.163.com/">网易云音乐</a>
-            </h1>
-
+    <div>
+        <div id="top_menu">
+            <div id="top_menu_logo">
+                <img src="../imgs/music.jpeg" alt="" style=" height: 35px;width: 35px">
+                <h1>
+                    <span  class="glyphicon glyphicon-leaf"></span>
+                    <a href="https://music.163.com/">网易云音乐</a>
+                </h1>
+            </div>
+            <div id="top_menu_wd">
+                <ul class="menu">
+                    <li>
+                        <a href="#">
+                            发现音乐
+                        </a>
+                        <span class="glyphicon glyphicon-triangle-top"></span>
+                    </li>
+                    <li><a href="">
+                            我的音乐
+                        </a>
+                        <span class="glyphicon glyphicon-triangle-top"></span></li>
+                    <li><a href="">
+                            朋友
+                        </a>
+                        <span class="glyphicon glyphicon-triangle-top"></span></li>
+                    <li><a href="">
+                            商城
+                        </a>
+                        <span class="glyphicon glyphicon-triangle-top"></span></li>
+                    <li><a href="">
+                            音乐人
+                        </a>
+                        <span class="glyphicon glyphicon-triangle-top"></span></li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
-        <div style="float: left">
-            <ul class="nav">
-                <li class="presentation">推荐</li>
-                <li class="presentation">排行榜</li>
-                <li class="presentation">歌单</li>
-                <li class="presentation">主播电台</li>
-                <li class="presentation">歌手</li>
-                <li class="presentation">新碟上架</li>
+        <div id="bottom_menu">
+            <ul class="nav nav-pills">
+                <li class="menu_wd"><a href="#">推荐</a></li>
+                <li ><a href="">排行榜</a></li>
+                <li ><a href="">歌单</a></li>
+                <li ><a href="">主播电台</a></li>
+                <li ><a href="">歌手</a></li>
+                <li ><a href="">新碟上架</a></li>
             </ul>
         </div>
     </div>

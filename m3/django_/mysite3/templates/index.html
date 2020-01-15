@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block mytitle %}
+    <title>index</title>
+    {% endblock %}
+</head>
+<body>
+<a href="/index">index</a>
+<a href="/music">music</a>
+<a href="/sports">sports</a>
+
+{% block info %}
+    this is index
+{% endblock %}
+
+<br>
+{{ lst }} #模板的继承不会服务端的的动态内容
+<h2>lalalala lalalala miss her</h2>
+</body>
+</html>
