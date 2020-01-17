@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<body>
+<form action="/bookstore/update_book/{{book.id}}" method="post">
+    <p>title:{{ book.title }}</p>
+    <p>pub:{{ book.pub}}</p>
+    <p>price: <input type="text" value="{{book.price}}" name="price"></p>
+    <p>market_price: <input type="text" value="{{book.market_price}}" name="market_price"></p>
+    <p>
+        <input type="submit" value="更新">
+    </p>
+</form>
+</body>
+</html>
