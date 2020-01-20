@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h3>index</h3>
+{% if request.session.username %}
+welcome:{{request.session.username}}
+{% else %}
+<a href="/user/login">登录</a>
+<a href="/user/reg">注册</a>
+{% endif %}
+
+
+
+</body>
+</html>

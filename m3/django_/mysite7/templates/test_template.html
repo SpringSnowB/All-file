@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_templats</title>
+</head>
+<body>
+{% load cache %}
+{% cache time_t1 %}
+my ti is {{t1}}
+{% endcache %}
+my no cache t1 is {{t1}}
+</body>
+</html>

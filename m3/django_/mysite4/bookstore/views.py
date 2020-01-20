@@ -21,8 +21,12 @@ def add_view(request):
             print(e)
             return HttpResponse('your price is not number')
         #返回值QuerySet->[obj]
+
+        #1,先从缓存拿flter的数据，缓存没有上几乎句
+        # 2,查完数据的数据 记得存储到Cache里面一份
         all_book = Book.objects.filter(title=title)
         if all_book:
+
             return HttpResponseRedirect('书已存在')
         #返回值为对象
         # try:
